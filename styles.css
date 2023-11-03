@@ -236,3 +236,34 @@ body {
     font-family: 'Madegra DEMO', sans-serif;
     font-size: 250px;
 }
+
+  /* The overlay is not displayed by default */
+  .desktop-only-overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    z-index: 1000;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+  }
+
+  /* The message container */
+  .desktop-only-message {
+    font-size: 1.5em;
+    padding: 20px;
+    border: 2px solid white;
+    border-radius: 5px;
+  }
+
+  /* Media query for devices with a width of 800px or less */
+  @media screen and (max-width: 800px) {
+    .desktop-only-overlay {
+      display: flex; /* Flex will center the content */
+    }
+  }
